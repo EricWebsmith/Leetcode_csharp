@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Leetcode0413;
 
@@ -64,14 +63,14 @@ public class SolutionTest
         Assert.AreEqual(expected, actual);
     }
 
-    [TestMethod] public void Test1() { TestBase(new int[] { 1, 2, 3, 4 }, 3); }
-    [TestMethod] public void Test2() { TestBase(new int[] { 1 }, 0); }
-    [TestMethod] public void Test3() { TestBase(new int[] { 3, 3 }, 0); }
-    [TestMethod] public void Test4() { TestBase(new int[] { 1, 2, 3, 4, 5 }, 6); }
+    [TestMethod] public void Test01() { TestBase(new int[] { 1, 2, 3, 4 }, 3); }
+    [TestMethod] public void Test02() { TestBase(new int[] { 1 }, 0); }
+    [TestMethod] public void Test03() { TestBase(new int[] { 3, 3 }, 0); }
+    [TestMethod] public void Test04() { TestBase(new int[] { 1, 2, 3, 4, 5 }, 6); }
 
-    [TestMethod] public void Test5() { TestBase(new int[] { 1 }, 0); }
-    [TestMethod] public void Test6() { TestBase(new int[] { 0 }, 0); }
-    [TestMethod] public void Test7() { TestBase(new int[] { 0, 0, 0 }, 1); }
-    [TestMethod] public void Test8() { TestBase(new int[] { 0, 1, 0 }, 0); }
+    [TestMethod] public void Test05() { TestBase(new int[] { 1 }, 0); }
+    [TestMethod] public void Test06() { TestBase(new int[] { 0 }, 0); }
+    [TestMethod] public void Test07() { TestBase(new int[] { 0, 0, 0 }, 1); }
+    [TestMethod] public void Test08() { TestBase(new int[] { 0, 1, 0 }, 0); }
     [TestMethod] public void TestLast() { TestBase(new int[] { 1, 2, 3, 4 }, 3); }
 }
