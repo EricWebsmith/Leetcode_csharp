@@ -6,7 +6,7 @@ namespace Leetcode0994;
 
 public class Solution
 {
-    [DebuggerDisplay("{x} {y}")]
+    [DebuggerDisplay("{x}, {y}")]
     private struct Position
     {
         public Position(int x, int y)
@@ -66,7 +66,7 @@ public class Solution
         {
             List<Position> newPositions = new List<Position>();
             int size = positions.Count;
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 Position p = positions.Dequeue();
 
