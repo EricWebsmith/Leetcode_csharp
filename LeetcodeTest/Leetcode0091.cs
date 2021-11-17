@@ -1,7 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Leetcode0091;
 
@@ -48,12 +45,9 @@ public class Solution
             return OneStep(s, 0);
         }
 
-        int a = 0;
-        int b = 0;
+        int a = 1;
+        int b = OneStep(s, 0);
         int c = 0;
-
-        a = 1;
-        b = OneStep(s, 0);
 
         for (int i = 2; i <= s.Length; i++)
         {
