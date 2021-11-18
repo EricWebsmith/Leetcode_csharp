@@ -1,9 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Leetcode0263;
 
@@ -17,9 +12,9 @@ public class Solution
         }
 
         //2
-        while(n % 2 == 0)
+        while((n & 0x1) == 0)
         {
-            n /= 2;
+            n = n >> 1;
         }
 
         //3
