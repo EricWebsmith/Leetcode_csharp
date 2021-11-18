@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Leetcode112
+﻿namespace Leetcode112
 {
 
 

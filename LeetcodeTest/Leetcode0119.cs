@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Leetcode0119;
+﻿namespace Leetcode0119;
 
 public class Solution
 {

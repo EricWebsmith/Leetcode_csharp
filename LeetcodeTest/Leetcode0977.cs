@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Leetcode0977;
+﻿namespace Leetcode0977;
 public class Solution
 {
     public int GetLastNegative(int[] nums)

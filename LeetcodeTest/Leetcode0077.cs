@@ -1,8 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Leetcode0077;
+﻿namespace Leetcode0077;
 
 public class Solution
 {

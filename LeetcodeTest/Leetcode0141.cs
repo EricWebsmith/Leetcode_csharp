@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace LeetcodeTest0141;
+﻿namespace LeetcodeTest0141;
 
 public class ListNode
 {

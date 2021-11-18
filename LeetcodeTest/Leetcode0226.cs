@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Leetcode0226;
+﻿namespace Leetcode0226;
 
 public class TreeNode
 {

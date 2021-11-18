@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Leetcode0189;
+﻿namespace Leetcode0189;
 public class Solution
 {
     public void Rotate(int[] nums, int k)

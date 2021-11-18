@@ -1,8 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Leetcode0203;
+﻿namespace Leetcode0203;
 
 public class ListNode
 {

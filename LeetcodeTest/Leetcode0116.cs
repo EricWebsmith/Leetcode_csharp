@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Leetcode0116;
+﻿namespace Leetcode0116;
 
 public class Node
 {

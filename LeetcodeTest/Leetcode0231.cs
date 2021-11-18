@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Leetcode0231;
+﻿namespace Leetcode0231;
 
 public class Solution
 {

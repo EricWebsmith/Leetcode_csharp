@@ -1,8 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Linq;
-
-namespace Leetcode2008;
+﻿namespace Leetcode2008;
 
 // looks terrible compared to the same python code.
 public class Solution
