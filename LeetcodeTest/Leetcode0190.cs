@@ -9,9 +9,9 @@ public class Solution
         int index = 31;
         while (n > 0)
         {
-            uint r = n % 2;
+            uint r = n & 1;
             arr[index] = r;
-            n = n / 2;
+            n = n >> 1;
             index--;
         }
 
@@ -31,7 +31,10 @@ public class Solution
 public class SolutionTest
 {
 
-    private void TestBase(uint n, uint expected)
+    [DataRow(43261596U, 964176192U)]
+    [DataRow(4294967293, 3221225471)]
+    [DataTestMethod]
+    public void TestBase(uint n, uint expected)
     {
         Solution solution = new Solution();
         uint actual = solution.reverseBits(n);
