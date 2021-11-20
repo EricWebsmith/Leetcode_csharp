@@ -31,8 +31,9 @@ public class Solution
 public class SolutionTest
 {
 
-    [DataRow(43261596U, 964176192U)]
+    [DataRow(43261596u, 964176192u)]
     [DataRow(4294967293, 3221225471)]
+    [DataRow(0b00000010100101000001111010011100u, 0b00111001011110000010100101000000u)]
     [DataTestMethod]
     public void TestBase(uint n, uint expected)
     {

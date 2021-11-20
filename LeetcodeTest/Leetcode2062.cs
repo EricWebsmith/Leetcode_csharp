@@ -14,7 +14,7 @@ public class Solution
         charInts.Add('o', 8);
         charInts.Add('u', 16);
 
-        int aeiou = 1 + 2 + 4 + 8 + 16;
+        int aeiou = 0b11111;
 
 
         for(int i=0; i<word.Length-4; i++)
