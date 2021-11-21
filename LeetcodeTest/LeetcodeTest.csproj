@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -24,13 +24,16 @@
     <Compile Remove="Leetcode0046.cs" />
     <Compile Remove="Leetcode0053.cs" />
     <Compile Remove="Leetcode0055.cs" />
+    <Compile Remove="Leetcode0056.cs" />
     <Compile Remove="Leetcode0070.cs" />
     <Compile Remove="Leetcode0074.cs" />
+    <Compile Remove="Leetcode0075.cs" />
     <Compile Remove="Leetcode0077.cs" />
     <Compile Remove="Leetcode0088.cs" />
     <Compile Remove="Leetcode0091.cs" />
     <Compile Remove="Leetcode0096.cs" />
     <Compile Remove="Leetcode0102.cs" />
+    <Compile Remove="Leetcode0106.cs" />
     <Compile Remove="Leetcode0112.cs" />
     <Compile Remove="Leetcode0116.cs" />
     <Compile Remove="Leetcode0118.cs" />
@@ -88,6 +91,7 @@
     <Compile Remove="Leetcode0700.cs" />
     <Compile Remove="Leetcode0701.cs" />
     <Compile Remove="Leetcode0704.cs" />
+    <Compile Remove="Leetcode0706.cs" />
     <Compile Remove="Leetcode0733.cs" />
     <Compile Remove="Leetcode0740.cs" />
     <Compile Remove="Leetcode0746.cs" />

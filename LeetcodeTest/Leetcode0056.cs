@@ -99,5 +99,4 @@ public class SolutionTest
 
         TestBase(intervals, expected);
     }
-
 }
