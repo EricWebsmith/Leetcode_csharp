@@ -22,9 +22,12 @@
     <Compile Remove="Leetcode0042.cs" />
     <Compile Remove="Leetcode0045.cs" />
     <Compile Remove="Leetcode0046.cs" />
+    <Compile Remove="Leetcode0048.cs" />
     <Compile Remove="Leetcode0053.cs" />
     <Compile Remove="Leetcode0055.cs" />
     <Compile Remove="Leetcode0056.cs" />
+    <Compile Remove="Leetcode0059.cs" />
+    <Compile Remove="Leetcode0064.cs" />
     <Compile Remove="Leetcode0070.cs" />
     <Compile Remove="Leetcode0074.cs" />
     <Compile Remove="Leetcode0075.cs" />
@@ -59,6 +62,7 @@
     <Compile Remove="Leetcode0205.cs" />
     <Compile Remove="Leetcode0213.cs" />
     <Compile Remove="Leetcode0217.cs" />
+    <Compile Remove="Leetcode0221.cs" />
     <Compile Remove="Leetcode0226.cs" />
     <Compile Remove="Leetcode0231.cs" />
     <Compile Remove="Leetcode0232.cs" />
@@ -79,6 +83,7 @@
     <Compile Remove="Leetcode0461.cs" />
     <Compile Remove="Leetcode0463.cs" />
     <Compile Remove="Leetcode0509.cs" />
+    <Compile Remove="Leetcode0516.cs" />
     <Compile Remove="Leetcode0540.cs" />
     <Compile Remove="Leetcode0542.cs" />
     <Compile Remove="Leetcode0557.cs" />
@@ -102,6 +107,7 @@
     <Compile Remove="Leetcode0876.cs" />
     <Compile Remove="Leetcode0918.cs" />
     <Compile Remove="Leetcode0931.cs" />
+    <Compile Remove="Leetcode0952.cs" />
     <Compile Remove="Leetcode0977.cs" />
     <Compile Remove="Leetcode0986.cs" />
     <Compile Remove="Leetcode0994.cs" />
@@ -109,6 +115,7 @@
     <Compile Remove="Leetcode1137.cs" />
     <Compile Remove="Leetcode1314.cs" />
     <Compile Remove="Leetcode1567.cs" />
+    <Compile Remove="Leetcode1791.cs" />
     <Compile Remove="Leetcode1971.cs" />
     <Compile Remove="Leetcode2008.cs" />
     <Compile Remove="Leetcode2037.cs" />

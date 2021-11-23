@@ -139,7 +139,7 @@ public class MyTestClass
             nums[i] = i + 1;
         }
 
-        for(int i = 0; i < 5;i++)
+        for(int i = 0; i < 2;i++)
         {
             int actual = (new Solution()).LargestComponentSize(nums);
             Console.WriteLine(actual);

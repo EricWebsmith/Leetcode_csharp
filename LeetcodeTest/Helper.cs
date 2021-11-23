@@ -36,5 +36,18 @@
             }
             return result;
         }
+
+        public static void Print2D(int[][] matrix)
+        {
+            for (int y = 0; y < matrix.Length; y++)
+            {
+                string p = string.Empty;
+                for (int x = 0; x < matrix[y].Length; x++)
+                {
+                    p += $"{matrix[y][x]}, ";
+                }
+                Console.WriteLine(p);
+            }
+        }
     }
 }
