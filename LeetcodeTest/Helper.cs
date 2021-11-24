@@ -49,5 +49,16 @@ public static class Helper
             Console.WriteLine(p);
         }
     }
+
+    public static void Print1D(int[] nums)
+    {
+        string p = string.Empty;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            p += $"{nums[i]}, ";
+        }
+        Console.WriteLine(p);
+    }
+
 }
 
