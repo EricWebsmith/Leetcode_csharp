@@ -44,12 +44,6 @@ public class Solution
 
                 i++;
             }
-
-            //if(numList[i]>numList[i-1] && numList[i] > numList[i + 1])
-            //{
-            //    result++;
-            //    i++;
-            //}
         }
 
         result = result * 2 + 1;
