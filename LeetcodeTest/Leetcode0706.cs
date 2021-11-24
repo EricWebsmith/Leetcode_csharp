@@ -7,10 +7,7 @@ public class MyHashMap
 
     public MyHashMap()
     {
-        for(int i = 0; i <l.Length; i++)
-        {
-            l[i] = -1;
-        }
+        Array.Fill(l, -1);
     }
 
     public void Put(int key, int value)

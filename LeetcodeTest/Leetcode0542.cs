@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Leetcode0542;
+﻿namespace Leetcode0542;
 
 public class Solution
 {
@@ -27,10 +25,7 @@ public class Solution
         for (int i = 0; i < mat.Length; i++)
         {
             result[i] = new int[mat[i].Length];
-            for (int j = 0; j < mat[i].Length; j++)
-            {
-                result[i][j] = -1;
-            }
+            Array.Fill(result[i], -1);
         }
 
         List<Position> positions = new List<Position>();

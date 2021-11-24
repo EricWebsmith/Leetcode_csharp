@@ -40,14 +40,8 @@ public class Solution
     public long MaxTaxiEarnings(int n, int[][] rides)
     {
         dp = new int[n + 1];
-
-        for(int i = 0; i < dp.Length; i++)
-        {
-            dp[i] = -1;
-        }
-
+        Array.Fill(dp, -1);
         this.n = n;
-        // this.rides = rides;
 
         var list = rides.ToList();
         list.Sort((a, b) => a[0].CompareTo(b[0]));
