@@ -10,6 +10,7 @@
   <ItemGroup>
     <Compile Remove="Leetcode0001.cs" />
     <Compile Remove="Leetcode0003.cs" />
+    <Compile Remove="Leetcode0011.cs" />
     <Compile Remove="Leetcode0015.cs" />
     <Compile Remove="Leetcode0016.cs" />
     <Compile Remove="Leetcode0017.cs" />
@@ -66,15 +67,19 @@
     <Compile Remove="Leetcode0226.cs" />
     <Compile Remove="Leetcode0231.cs" />
     <Compile Remove="Leetcode0232.cs" />
+    <Compile Remove="Leetcode0240.cs" />
     <Compile Remove="Leetcode0242.cs" />
     <Compile Remove="Leetcode0263.cs" />
     <Compile Remove="Leetcode0264.cs" />
     <Compile Remove="Leetcode0278.cs" />
     <Compile Remove="Leetcode0279.cs" />
     <Compile Remove="Leetcode0283.cs" />
+    <Compile Remove="Leetcode0300.cs" />
     <Compile Remove="Leetcode0304.cs" />
+    <Compile Remove="Leetcode0322.cs" />
     <Compile Remove="Leetcode0334.cs" />
     <Compile Remove="Leetcode0350.cs" />
+    <Compile Remove="Leetcode0376.cs" />
     <Compile Remove="Leetcode0383.cs" />
     <Compile Remove="Leetcode0387.cs" />
     <Compile Remove="Leetcode0413.cs" />
