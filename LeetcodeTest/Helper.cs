@@ -9,8 +9,8 @@ public static class Helper
             return new int[][] { };
         }
 
-        string t = s.Replace("[[", "").Replace("]]", "");
-        string[] list = t.Split("],[", StringSplitOptions.RemoveEmptyEntries);
+        //string t = s.Replace("[[", "").Replace("]]", "");
+        string[] list = s.Split("],[");
         int[][] result = new int[list.Length][];
         for (int i = 0; i < list.Length; i++)
         {
@@ -37,7 +37,7 @@ public static class Helper
         return result;
     }
 
-    public static void Print2D(int[][] matrix)
+    public static void Print2D<T>(T[][] matrix)
     {
         for (int y = 0; y < matrix.Length; y++)
         {
