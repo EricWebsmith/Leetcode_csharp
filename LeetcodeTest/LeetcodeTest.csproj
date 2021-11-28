@@ -138,6 +138,9 @@
     <Compile Remove="Leetcode2062.cs" />
     <Compile Remove="Leetcode2068.cs" />
     <Compile Remove="Leetcode2073.cs" />
+    <Compile Remove="Leetcode5922.cs" />
+    <Compile Remove="Leetcode5923.cs" />
+    <Compile Remove="Leetcode5924.cs" />
   </ItemGroup>
 
   <ItemGroup>

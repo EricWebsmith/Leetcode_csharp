@@ -37,15 +37,30 @@ public static class Helper
         return result;
     }
 
-    public static void Print2D<T>(T[][] matrix)
+    //public static void Print2D<T>(T[][] matrix)
+    //{
+    //    for (int y = 0; y < matrix.Length; y++)
+    //    {
+    //        string p = string.Empty;
+    //        for (int x = 0; x < matrix[y].Length; x++)
+    //        {
+    //            p += $"{matrix[y][x]}, ";
+    //        }
+    //        Console.WriteLine(p);
+    //    }
+    //}
+
+    public static void Print2D<T>(IList<IList<T>> matrix)
     {
-        for (int y = 0; y < matrix.Length; y++)
+        for (int y = 0; y < matrix.Count; y++)
         {
             string p = string.Empty;
-            for (int x = 0; x < matrix[y].Length; x++)
+            for (int x = 0; x < matrix[y].Count; x++)
             {
-                p += $"{matrix[y][x]}, ";
+                p += $"{matrix[y][x]},";
             }
+            p = p.Trim(' ',',');
+            p = "[" + p + "]";
             Console.WriteLine(p);
         }
     }

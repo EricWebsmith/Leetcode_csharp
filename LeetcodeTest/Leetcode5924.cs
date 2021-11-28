@@ -5,7 +5,6 @@ public class Solution
     public int MinCost(int[] startPos, int[] homePos, int[] rowCosts, int[] colCosts)
     {
         int result = 0;
-        // move x
         int step = Math.Sign(homePos[0] - startPos[0]);
         if(step != 0)
         {
@@ -19,8 +18,6 @@ public class Solution
             }
         }
 
-
-        // move y
         step = Math.Sign(homePos[1] - startPos[1]);
         if (step != 0)
         {

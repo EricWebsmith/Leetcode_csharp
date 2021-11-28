@@ -1,9 +1,7 @@
-﻿using System.Text;
-
-namespace Leetcode5923;
+﻿namespace Leetcode5923;
 
 // the new number is 2086
-
+// this solution is terrible.
 
 public class Solution
 {
