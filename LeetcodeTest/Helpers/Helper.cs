@@ -65,10 +65,10 @@ public static class Helper
         }
     }
 
-    public static void Print1D(int[] nums)
+    public static void Print1D<T>(IList<T> nums)
     {
         string p = string.Empty;
-        for (int i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Count; i++)
         {
             p += $"{nums[i]}, ";
         }
