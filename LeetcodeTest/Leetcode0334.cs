@@ -1,38 +1,63 @@
 ﻿namespace Leetcode0334;
 
+/// <summary>
+/// Runtime: 172 ms, faster than 96.83% of C# online submissions for Increasing Triplet Subsequence.
+/// Memory Usage: 54.8 MB, less than 5.16% of C# online submissions for Increasing Triplet Subsequence.
+/// </summary>
 public class Solution
 {
-    public void ReverseString(char[] s)
+    public bool IncreasingTriplet(int[] nums)
     {
-        int pointer1 = 0;
-        int pointer2 = s.Length - 1;
-        while(pointer1 < pointer2)
+        int n = nums.Length;
+        int[] minArr = new int[n];
+        minArr[0] = nums[0];
+        for (int i = 1; i < n; i++)
         {
-            char temp = s[pointer1];
-            s[pointer1] = s[pointer2];
-            s[pointer2] = temp;
-            pointer1++;
-            pointer2--;
+            minArr[i] = Math.Min(minArr[i - 1], nums[i]);
         }
+
+        //minArr.Print1D();
+
+        int[] maxArr = new int[n];
+        maxArr[n-1] = nums[n-1];
+        for(int i = n-2;i >= 0; i--)
+        {
+            maxArr[i] = Math.Max(maxArr[i + 1], nums[i]);
+        }
+
+        //maxArr.Print1D();
+
+        for(int i = 1; i < n - 1; i++)
+        {
+            if(nums[i] > minArr[i-1] && nums[i] < maxArr[i + 1])
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 
 [TestClass]
-public class SolutionTest
+public class SolutionTests
 {
-
-    private void TestBase(char[] s, char[] expected)
+    [DataRow(1, "[1,2,3,4,5]", true)]
+    [DataRow(2, "[5,4,3,2,1]", false)]
+    [DataRow(3, "[2,1,5,0,4,6]", true)]
+    [DataRow(4, "[2]", false)]
+    [DataRow(5, "[2,1]", false)]
+    [DataRow(6, "[1,2]", false)]
+    [DataRow(7, "[1,2,3]", true)]
+    [DataRow(8, "[1,2,2]", false)]
+    [DataRow(9, "[2,1,5,0,4,6]", true)]
+    [DataRow(10, "[2,1,5,0,4,6]", true)]
+    [DataRow(11, "[2,1,5,0,4,6]", true)]
+    [DataTestMethod]
+    public void Test(int order, string numsStr, bool expected)
     {
-        Solution solution = new Solution();
-        solution.ReverseString(s);
-        for(int i = 0; i < expected.Length; i++)
-        {
-            Assert.AreEqual(expected[i], s[i]);
-        }
+        int[] nums = numsStr.Convert1D();
+        bool actual = new Solution().IncreasingTriplet(nums);
+        Assert.AreEqual(expected, actual);
     }
-
-    [TestMethod] public void Test1() { TestBase(new char[] { 'h', 'e', 'l', 'l', 'o' }, new char[] { 'o', 'l', 'l', 'e', 'h' }); }
-    [TestMethod] public void Test2() { TestBase(new char[] { 'H', 'a', 'n', 'n', 'a', 'h' }, new char[] { 'h', 'a', 'n', 'n', 'a', 'H' }); }
-
-
 }

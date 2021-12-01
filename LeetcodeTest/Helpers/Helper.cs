@@ -27,7 +27,7 @@ public static class Helper
             return new char[] { };
         }
 
-        string t = s.Replace("[", "").Replace("]", "").Replace("'","");
+        string t = s.Replace("[", "").Replace("]", "").Replace("'", "");
         string[] list = t.Split(',', StringSplitOptions.RemoveEmptyEntries);
         char[] result = new char[list.Length];
         for (int i = 0; i < list.Length; i++)
@@ -85,6 +85,18 @@ public static class Helper
     //    }
     //}
 
+    public static string ToLeetcode(this IList<int> arr)
+    {
+        string s = string.Empty;
+        for (int i = 0; i < arr.Count; i++)
+        {
+            s += $"{arr[i]},";
+        }
+        s = s.Trim(' ', ',');
+        s = "[" + s + "]";
+        return s;
+    }
+
     public static void Print2D<T>(this IList<IList<T>> matrix)
     {
         for (int y = 0; y < matrix.Count; y++)
@@ -94,7 +106,22 @@ public static class Helper
             {
                 p += $"{matrix[y][x]},";
             }
-            p = p.Trim(' ',',');
+            p = p.Trim(' ', ',');
+            p = "[" + p + "]";
+            Console.WriteLine(p);
+        }
+    }
+
+    public static void PrintListOfArray<T>(this IList<T[]> matrix)
+    {
+        for (int y = 0; y < matrix.Count; y++)
+        {
+            string p = string.Empty;
+            for (int x = 0; x < matrix[y].Length; x++)
+            {
+                p += $"{matrix[y][x]},";
+            }
+            p = p.Trim(' ', ',');
             p = "[" + p + "]";
             Console.WriteLine(p);
         }

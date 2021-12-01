@@ -1,5 +1,9 @@
 ﻿namespace Leetcode0198;
 
+/// <summary>
+/// Runtime: 72 ms, faster than 98.37% of C# online submissions for House Robber.
+/// Memory Usage: 37 MB, less than 60.48% of C# online submissions for House Robber.
+/// </summary>
 public class Solution
 {
     public int Rob(int[] nums)
@@ -8,27 +12,24 @@ public class Solution
         {
             return nums[0];
         }
-        
         if(nums.Length == 2)
         {
             return Math.Max(nums[0], nums[1]);
         }
+        int n = nums.Length;
+        int a = nums[n - 1];
+        int b = nums[n - 2];
+        int c = nums[n - 3] + nums[n - 1];
 
-        int[] income = new int[nums.Length];
-        income[income.Length - 1] = nums[nums.Length - 1];
-        income[income.Length - 2] = nums[nums.Length - 2];
-        int maxIncome = Math.Max(nums[nums.Length - 1], nums[nums.Length - 2]);
-        for(int i = nums.Length - 3; i >= 0; i--)
+        for(int i = n - 4; i >= 0; i--)
         {
-            income[i] = nums[i] + income[i+2];
-            for (int j = i+3;j< nums.Length; j++)
-            {
-                income[i] = Math.Max(income[i], nums[i] + income[j]);
-            }
-            maxIncome = Math.Max(maxIncome, income[i]);
+            int d = nums[i] + Math.Max(a, b);
+            a = b;
+            b = c;
+            c = d;
         }
 
-        return maxIncome;
+        return Math.Max(b, c);
     }
 }
 
