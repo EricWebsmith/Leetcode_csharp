@@ -19,6 +19,7 @@ public static class ListNodeHelper
     public static ListNode ToListNode(this string numsStr)
     {
         int[] nums = Helper.Convert1D(numsStr);
+        if(nums.Length == 0) { return null; }
         ListNode head = new ListNode();
         head.val = nums[0];
         ListNode pointer = head;
