@@ -14,13 +14,9 @@ public class Solution
         for(int i = 0;i<=s.Length - 10; i++)
         {
             string subStr = s.Substring(i, 10);
-            if (hash.Contains(subStr))
+            if (!hash.Add(subStr))
             {
                 result.Add(subStr);
-            }
-            else
-            {
-                hash.Add(subStr);
             }
         }
 
