@@ -1,83 +1,35 @@
 ﻿namespace Leetcode0152;
 
+/// <summary>
+/// Runtime: 64 ms, faster than 100.00% of C# online submissions for Maximum Product Subarray.
+/// Memory Usage: 38.9 MB, less than 8.97% of C# online submissions for Maximum Product Subarray.
+/// Always keep the current max and current min, because current min will be flipped to max.
+/// </summary>
 public class Solution
 {
-    private int Product(int[] nums , int start, int end)
-    {
-        int product = 1;
-        for(int i=start;i<=end;i++)
-        {
-            product *= nums[i];
-        }
-        return product;
-    }
-
-    private int MaxProductNoZero(int[] nums, int start, int end)
-    {
-        if(start == end)
-        {
-            return nums[start];
-        }
-        int firstNegative = -1;
-        int lastNegative = -1;
-        int countNegative = 0;
-        for(int i = start; i <= end; i++)
-        {
-            if(nums[i] < 0)
-            {
-                countNegative++;
-                if(firstNegative == -1)
-                {
-                    firstNegative = i;
-                }
-                lastNegative = i;
-            }
-        }
-
-        if(countNegative % 2 == 0)
-        {
-            return Product(nums, start, end);
-        }
-
-        return Math.Max(Product(nums, firstNegative+1, end), Product(nums, start, lastNegative-1));
-    }
-
     public int MaxProduct(int[] nums)
     {
-        if (nums.Length == 1) { return nums[0]; }
-        int maxValue = nums[0];
-        int start = 0;
-        int end = nums.Length - 1;
-        for(int i=1;i< nums.Length; i++)
+        int result = nums[0];
+        int currentMin = nums[0];
+        int currentMax = nums[0];
+        for (int i = 1; i < nums.Length; i++)
         {
-            // find end
-            if (nums[i] == 0 && nums[i-1]!=0)
+            if(nums[i] == 0)
             {
-                maxValue = Math.Max(0, maxValue);
-                end = i - 1;
-                if(end>= start)
-                {
-                    int curMaxValue = MaxProductNoZero(nums, start, end);
-                    maxValue = Math.Max(maxValue, curMaxValue);
-                }
-                
-                start = i + 1;
+                result = Math.Max(result, 0);
+                currentMax = 1;
+                currentMin = 1;
+                continue;
             }
 
-            if(nums[i] !=0 && nums[i - 1] == 0)
-            {
-                start = i;
-            }
+            int[] options = new int[] {currentMax * nums[i], currentMin * nums[i] , nums[i] };
+            Array.Sort(options);
+            currentMin = options[0];
+            currentMax = options[2];
+            result = Math.Max(result, currentMax);
         }
 
-        if(nums[nums.Length-1] != 0)
-        {
-            int curMaxValue = MaxProductNoZero(nums, start, nums.Length - 1);
-            maxValue = Math.Max(maxValue, curMaxValue);
-        }
-
-
-        return maxValue;
+        return result;
     }
 }
 
@@ -103,6 +55,5 @@ public class SolutionTest
     [TestMethod] public void Test09() { TestBase(new int[] { 2, -5, -2, -4, 3 }, 24); }
     [TestMethod] public void Test10() { TestBase(new int[] { 2, -5, -4, 3 }, 120); }
     [TestMethod] public void Test11() { TestBase(new int[] { 4, -2, 3, 2, -2, 3, 3, -2, 1 }, 864); }
-
 
 }
