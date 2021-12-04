@@ -1,56 +1,39 @@
 ﻿namespace Leetcode0213;
 
+/// <summary>
+/// Runtime: 88 ms, faster than 45.57% of C# online submissions for House Robber II.
+/// Memory Usage: 37.6 MB, less than 5.27% of C# online submissions for House Robber II.
+/// </summary>
 public class Solution
 {
-    public int RobLine(int[] nums)
+    public int RobLine(int[] nums, int start, int end)
     {
-        if(nums.Length == 1)
+        int a = nums[end];
+        int b = nums[end - 1];
+        int c = a + nums[end-2];
+        int d;
+        for(int i = end - 3;i>= start; i--)
         {
-            return nums[0];
+            d = Math.Max(a, b) + nums[i];
+            a = b;
+            b = c;
+            c = d;
         }
-        
-        if(nums.Length == 2)
-        {
-            return Math.Max(nums[0], nums[1]);
-        }
-
-        int[] income = new int[nums.Length];
-        income[income.Length - 1] = nums[nums.Length - 1];
-        income[income.Length - 2] = nums[nums.Length - 2];
-        int maxIncome = Math.Max(nums[nums.Length - 1], nums[nums.Length - 2]);
-        for(int i = nums.Length - 3; i >= 0; i--)
-        {
-            income[i] = nums[i] + income[i+2];
-            for (int j = i+3;j< nums.Length; j++)
-            {
-                income[i] = Math.Max(income[i], nums[i] + income[j]);
-            }
-            maxIncome = Math.Max(maxIncome, income[i]);
-        }
-
-        return maxIncome;
+        Console.WriteLine($"{b} {c}");
+        return Math.Max(b, c);
     }
 
     public int Rob(int[] nums)
     {
-        if (nums.Length == 1)
+        int n = nums.Length;
+
+        if (nums.Length <= 3)
         {
-            return nums[0];
+            return nums.Max();
         }
 
-        if (nums.Length == 2)
-        {
-            return Math.Max(nums[0], nums[1]);
-        }
-        int[] nums1 = new int[nums.Length-1];
-        int[] nums2 = new int[nums.Length - 1];
-        for(int i = 0; i < nums.Length-1; i++)
-        {
-            nums1[i] = nums[i];
-            nums2[i] = nums[i+1];
-        }
-        int plan1 = RobLine(nums1);
-        int plan2 = RobLine(nums2);
+        int plan1 = RobLine(nums, 0, n-2);
+        int plan2 = RobLine(nums, 1, n-1);
         return Math.Max(plan1, plan2);
     }
 }
@@ -70,4 +53,6 @@ public class SolutionTest
     [TestMethod] public void Test2() { TestBase(new int[] { 1, 2, 3, 1 },4); }
     [TestMethod] public void Test3() { TestBase(new int[] { 1,2,3 }, 3); }
     [TestMethod] public void Test4() { TestBase(new int[] { 0 }, 0); }
+    [TestMethod] public void Test5() { TestBase(new int[] { 200, 3, 140, 20, 10 }, 340); }
+    [TestMethod] public void Test6() { TestBase(new int[] { 4, 1, 2, 7, 5, 3, 1 }, 14); }
 }

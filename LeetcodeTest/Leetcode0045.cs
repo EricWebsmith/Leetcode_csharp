@@ -1,43 +1,34 @@
 ﻿namespace Leetcode0045;
 
+/// <summary>
+/// Runtime: 100 ms, faster than 82.20% of C# online submissions for Jump Game II.
+/// Memory Usage: 41 MB, less than 32.32% of C# online submissions for Jump Game II.
+/// </summary>
 public class Solution
 {
     public int Jump(int[] nums)
     {
-        int[] results = new int[nums.Length];
-        results[nums.Length - 1] = 0;
-        for (int i = nums.Length - 2; i >= 0; i--)
-        {
-            int jumpPower = nums[i];
-            int minJump = 1 + results[i+1];
-            for (int j = 1; j <= jumpPower && i + j <= nums.Length - 1; j++)
-            {
-                minJump = Math.Min(minJump,results[i+j]+1);
-            }
-            results[i] = minJump;
-        }
-        return results[0];
-    }
-
-    public int Jump2(int[] nums)
-    {
+        int n = nums.Length;
+        if (n == 1) { return 0; }
         int max = 0;
         int nextMax = 0;
         int jumps = 0;
-        for (int i = 0; i < nums.Length - 1; i++)
+        for (int i = 0; i < n - 1; i++)
         {
-            nextMax = Math.Max(nextMax, i + nums[i]);
-            if (nextMax >= nums.Length - 1)
+            nextMax = Math.Max(nextMax , nums[i] + i);
+
+            if (nextMax >= n - 1)
             {
                 return jumps + 1;
             }
-            if (i == max)
+
+            if (max == i)
             {
                 max = nextMax;
                 jumps++;
             }
         }
-        return jumps;
+        return -1;
     }
 }
 
@@ -48,7 +39,7 @@ public class SolutionTest
     private void TestBase(int[] nums, int expected)
     {
         Solution solution = new Solution();
-        int actual = solution.Jump2(nums);
+        int actual = solution.Jump(nums);
         Assert.AreEqual(expected, actual);
     }
 
@@ -59,7 +50,7 @@ public class SolutionTest
     [TestMethod] public void Test5() { TestBase(new int[] { 0 }, 0); }
     [TestMethod] public void Test6() { TestBase(new int[] { 4, 2, 1, 0, 4 }, 1); }
     [TestMethod] public void Test8() { TestBase(new int[] { 4, 3, 8, 0, 0, 0, 0, 4 }, 2); }
-    
+
 
 
 }

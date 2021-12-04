@@ -1,41 +1,24 @@
 ﻿namespace Leetcode0055;
 
+/// <summary>
+/// Runtime: 164 ms, faster than 94.50% of C# online submissions for Jump Game.
+/// Memory Usage: 43.6 MB, less than 29.25% of C# online submissions for Jump Game.
+/// </summary>
 public class Solution
 {
-    public bool CanJump(int[] nums)
-    {
-        bool[] results = new bool[nums.Length];
-        results[nums.Length - 1] = true;
-        for (int i = nums.Length - 2; i >= 0; i--)
-        {
-            int jumps = nums[i];
-            for (int j = 1; j <= jumps && i + j <= nums.Length - 1; j++)
-            {
-                if (results[i + j])
-                {
-                    results[i] = true;
-                    break;
-                }
-            }
-        }
-        return results[0];
-    }
 
-    public bool CanJump2(int[] nums)
+    public bool CanJump(int[] nums)
     {
         var maxLength = 0;
 
         for (var i = 0; i < nums.Length; i++)
         {
-            if (i <= maxLength)
+            if(i > maxLength)
             {
-                maxLength = Math.Max(maxLength, i + nums[i]);
+                return false;
             }
 
-            if (maxLength >= nums.Length - 1)
-            {
-                return true;
-            }
+            maxLength = Math.Max(maxLength, i + nums[i]);
         }
 
         return maxLength >= nums.Length - 1;
@@ -49,7 +32,7 @@ public class SolutionTest
     private void TestBase(int[] nums, bool expected)
     {
         Solution solution = new Solution();
-        bool actual = solution.CanJump2(nums);
+        bool actual = solution.CanJump(nums);
         Assert.AreEqual(expected, actual);
     }
 
