@@ -1,5 +1,6 @@
 ﻿namespace LeetcodeTest;
 
+[DebuggerDisplay("{val}")]
 public class TreeNode
 {
     public int val;
@@ -15,7 +16,7 @@ public class TreeNode
 
 public static class TreeHelper
 {
-    public static TreeNode ToTree(string rootStr)
+    public static TreeNode LeetcodeToTree(this string rootStr)
     {
         string[] arr = rootStr
             .Replace("[","")

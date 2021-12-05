@@ -1,26 +1,25 @@
 ﻿namespace LeetcodeTest;
 
-public static class Helper
+public static class ArrayHelper
 {
-    public static char[][] Convert2DChar(this string s)
+    public static char[][] LeetcodeToCharArray2D(this string s)
     {
         if (s == "[]")
         {
             return new char[][] { };
         }
 
-        //string t = s.Replace("[[", "").Replace("]]", "");
         string[] list = s.Split("],[");
         char[][] result = new char[list.Length][];
         for (int i = 0; i < list.Length; i++)
         {
-            char[] arr = Convert1DChar(list[i]);
+            char[] arr = LeetcodeToCharArray(list[i]);
             result[i] = arr;
         }
         return result;
     }
 
-    public static char[] Convert1DChar(this string s)
+    public static char[] LeetcodeToCharArray(this string s)
     {
         if (s == "[]")
         {
@@ -37,25 +36,24 @@ public static class Helper
         return result;
     }
 
-    public static int[][] Convert2D(this string s)
+    public static int[][] LeetcodeToArray2D(this string s)
     {
         if (s == "[]")
         {
             return new int[][] { };
         }
 
-        //string t = s.Replace("[[", "").Replace("]]", "");
         string[] list = s.Split("],[");
         int[][] result = new int[list.Length][];
         for (int i = 0; i < list.Length; i++)
         {
-            int[] arr = Convert1D(list[i]);
+            int[] arr = LeetcodeToArray(list[i]);
             result[i] = arr;
         }
         return result;
     }
 
-    public static int[] Convert1D(this string s)
+    public static int[] LeetcodeToArray(this string s)
     {
         if (s == "[]")
         {
@@ -71,19 +69,6 @@ public static class Helper
         }
         return result;
     }
-
-    //public static void Print2D<T>(T[][] matrix)
-    //{
-    //    for (int y = 0; y < matrix.Length; y++)
-    //    {
-    //        string p = string.Empty;
-    //        for (int x = 0; x < matrix[y].Length; x++)
-    //        {
-    //            p += $"{matrix[y][x]}, ";
-    //        }
-    //        Console.WriteLine(p);
-    //    }
-    //}
 
     public static string ToLeetcode(this IList<int> arr)
     {
@@ -137,5 +122,15 @@ public static class Helper
         Console.WriteLine(p);
     }
 
+    public static string[] LeetcodeToStringArray(this string s)
+    {
+        string t = s.Replace("[", "").Replace("]", "");
+        string[] arr = t.Split(',');
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arr[i] = arr[i].Trim('"');
+        }
+        return arr;
+    }
 }
 

@@ -1,6 +1,4 @@
-﻿
-
-namespace LeetcodeTest;
+﻿namespace LeetcodeTest;
 
 [DebuggerDisplay("{val}")]
 public class ListNode
@@ -16,9 +14,9 @@ public class ListNode
 
 public static class ListNodeHelper
 {
-    public static ListNode ToListNode(this string numsStr)
+    public static ListNode LeetcodeToListNode(this string numsStr)
     {
-        int[] nums = Helper.Convert1D(numsStr);
+        int[] nums = numsStr.LeetcodeToArray();
         if (nums.Length == 0) { return null; }
         ListNode head = new ListNode();
         head.val = nums[0];
@@ -49,7 +47,7 @@ public static class ListNodeHelper
 
     public static ListNode ToListNodeWithCircle(this string numsStr, int pos)
     {
-        int[] nums = Helper.Convert1D(numsStr);
+        int[] nums = numsStr.LeetcodeToArray();
         if (nums.Length == 0) { return null; }
         ListNode head = new ListNode();
         head.val = nums[0];
@@ -113,7 +111,7 @@ public static class ListNodeHelper
         return 0;
     }
 
-    public static string ToStr(this ListNode node)
+    public static string ToLeetcode(this ListNode node)
     {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.Append('[');
