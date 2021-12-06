@@ -20,8 +20,6 @@ public class Solution
             {
                 odd++;
             }
-
-            
         }
 
         return Math.Min(odd, even);
