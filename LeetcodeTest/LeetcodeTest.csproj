@@ -167,12 +167,15 @@
     <Compile Remove="Leetcode1032.cs" />
     <Compile Remove="Leetcode1091.cs" />
     <Compile Remove="Leetcode1137.cs" />
+    <Compile Remove="Leetcode1217.cs" />
     <Compile Remove="Leetcode1249.cs" />
+    <Compile Remove="Leetcode1290.cs" />
     <Compile Remove="Leetcode1314.cs" />
     <Compile Remove="Leetcode1567.cs" />
     <Compile Remove="Leetcode1791.cs" />
     <Compile Remove="Leetcode1823.cs" />
     <Compile Remove="Leetcode1971.cs" />
+    <Compile Remove="Leetcode2006.cs" />
     <Compile Remove="Leetcode2008.cs" />
     <Compile Remove="Leetcode2037.cs" />
     <Compile Remove="Leetcode2062.cs" />
