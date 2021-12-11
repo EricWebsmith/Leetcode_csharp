@@ -22,6 +22,7 @@ public static class TreeHelper
             .Replace("[","")
             .Replace("]", "")
             .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+        if(arr.Length == 0) { return null; }
         int?[] nodes = new int?[arr.Length];
         for (int i = 0; i < arr.Length; i++)
         {
@@ -75,5 +76,70 @@ public static class TreeHelper
             qCount = q.Count;
         }
         return root;
+    }
+
+    public static string ToLeetcode(this TreeNode head)
+    {
+        List<int?> values = new List<int?>();
+        
+
+        Queue<TreeNode> q = new Queue<TreeNode>();
+        q.Enqueue(head);
+        values.Add(head.val);
+        int qCount = q.Count;
+        while (qCount>0)
+        {
+            while(q.Count > 0)
+            {
+                TreeNode node = q.Dequeue();
+                if(node.left != null)
+                {
+                    values.Add(node.left.val);
+                    q.Enqueue(node.left);
+                }
+                else
+                {
+                    values.Add(null);
+                }
+
+                if(node.right != null)
+                {
+                    values.Add(node.right.val);
+                    q.Enqueue(node.right);
+                }
+                else
+                {
+                    values.Add(null);
+                }
+            }
+            qCount = q.Count;
+        }
+
+        int? last = values.Last();
+        while (!last.HasValue)
+        {
+            values.RemoveAt(values.Count-1);
+            last = values.Last();
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.Append('[');
+        for (int i = 0; i < values.Count-1; i++)
+        {
+            if (values[i].HasValue)
+            {
+                sb.Append(values[i].Value);
+                sb.Append(',');
+            }
+            else
+            {
+                sb.Append("null,");
+            }
+        }
+
+        sb.Append(values[values.Count - 1].Value);
+
+        sb.Append(']');
+        return sb.ToString();
     }
 }

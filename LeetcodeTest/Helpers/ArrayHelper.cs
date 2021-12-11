@@ -38,12 +38,14 @@ public static class ArrayHelper
 
     public static int[][] LeetcodeToArray2D(this string s)
     {
-        if (s == "[]")
+        string t = s;
+        t = t.Replace(" ", "");
+        if (t == "[]")
         {
             return new int[][] { };
         }
 
-        string[] list = s.Split("],[");
+        string[] list = t.Split("],[");
         int[][] result = new int[list.Length][];
         for (int i = 0; i < list.Length; i++)
         {
@@ -72,6 +74,11 @@ public static class ArrayHelper
 
     public static string ToLeetcode(this IList<int> arr)
     {
+        if(arr == null)
+        {
+            return "[]";
+        }
+
         string s = string.Empty;
         for (int i = 0; i < arr.Count; i++)
         {
