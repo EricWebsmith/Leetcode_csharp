@@ -1,9 +1,6 @@
 ﻿namespace Leetcode0000;
 
 
-
-
-
 [TestClass]
 public class SolutionTests
 {

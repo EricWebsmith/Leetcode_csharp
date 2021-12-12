@@ -89,6 +89,24 @@ public static class ArrayHelper
         return s;
     }
 
+
+    public static string ToLeetcode(this IList<IList<int>> arr)
+    {
+        if (arr == null)
+        {
+            return "[]";
+        }
+
+        string s = string.Empty;
+        for (int i = 0; i < arr.Count; i++)
+        {
+            s += $"{ToLeetcode(arr[i])},";
+        }
+        s = s.Trim(' ', ',');
+        s = "[" + s + "]";
+        return s;
+    }
+
     public static void Print2D<T>(this IList<IList<T>> matrix)
     {
         for (int y = 0; y < matrix.Count; y++)
