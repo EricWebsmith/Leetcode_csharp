@@ -38,6 +38,15 @@ private int gcd(int x, int y)
 int l = a / gcd(a, b) * b;
 ```
 
+## Compare the square instead of the square root.
+```csharp
+long distance2 = x * x + y * y;
+if (distance2 <= bombI[2] * bombI[2])
+{
+    graph[i][j] = 1;
+}
+```
+
 ## Implements
 
 Trie: 228
