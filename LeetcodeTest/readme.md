@@ -49,4 +49,7 @@ if (distance2 <= bombI[2] * bombI[2])
 
 ## Implements
 
-Trie: 228
+228. Trie
+137. Binary Search Tree Iterator
+297. Serialize and Deserialize Binary Tree
+Better finish this first.

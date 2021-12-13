@@ -12,12 +12,20 @@ public class TreeNode
         this.left = left;
         this.right = right;
     }
+
+    public override string ToString()
+    {
+        return val.ToString();
+    }
 }
 
 public static class TreeHelper
 {
     public static TreeNode LeetcodeToTree(this string rootStr)
     {
+        if(rootStr == null) { return null; }
+        if(rootStr == "[]") { return null; }
+
         string[] arr = rootStr
             .Replace("[","")
             .Replace("]", "")
@@ -26,7 +34,7 @@ public static class TreeHelper
         int?[] nodes = new int?[arr.Length];
         for (int i = 0; i < arr.Length; i++)
         {
-            if(arr[i] == "null")
+            if(arr[i].Trim() == "null")
             {
                 nodes[i] = null;
             }
@@ -78,14 +86,15 @@ public static class TreeHelper
         return root;
     }
 
-    public static string ToLeetcode(this TreeNode head)
+    public static string ToLeetcode(this TreeNode root)
     {
+        if(root == null) { return "[]"; }
         List<int?> values = new List<int?>();
         
 
         Queue<TreeNode> q = new Queue<TreeNode>();
-        q.Enqueue(head);
-        values.Add(head.val);
+        q.Enqueue(root);
+        values.Add(root.val);
         int qCount = q.Count;
         while (qCount>0)
         {
@@ -141,5 +150,31 @@ public static class TreeHelper
 
         sb.Append(']');
         return sb.ToString();
+    }
+
+    public static TreeNode GetNode(this TreeNode head, int val)
+    {
+        Queue<TreeNode> q = new Queue<TreeNode>();
+        q.Enqueue(head);
+        while (q.Count > 0)
+        {
+            TreeNode node = q.Dequeue();
+            if(node.val == val)
+            {
+                return node;
+            }
+
+            if(node.left != null)
+            {
+                q.Enqueue(node.left);
+            }
+
+            if(node.right!= null)
+            {
+                q.Enqueue(node.right);
+            }
+        }
+
+        return null;
     }
 }
