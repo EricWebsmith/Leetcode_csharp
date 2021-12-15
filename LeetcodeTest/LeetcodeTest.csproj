@@ -69,6 +69,7 @@
     <Compile Remove="Leetcode0141.cs" />
     <Compile Remove="Leetcode0142.cs" />
     <Compile Remove="Leetcode0143.cs" />
+    <Compile Remove="Leetcode0147.cs" />
     <Compile Remove="Leetcode0152.cs" />
     <Compile Remove="Leetcode0153.cs" />
     <Compile Remove="Leetcode0155.cs" />
@@ -93,6 +94,7 @@
     <Compile Remove="Leetcode0208.cs" />
     <Compile Remove="Leetcode0209.cs" />
     <Compile Remove="Leetcode0213.cs" />
+    <Compile Remove="Leetcode0215.cs" />
     <Compile Remove="Leetcode0217.cs" />
     <Compile Remove="Leetcode0221.cs" />
     <Compile Remove="Leetcode0226.cs" />
@@ -118,6 +120,7 @@
     <Compile Remove="Leetcode0337.cs" />
     <Compile Remove="Leetcode0343.cs" />
     <Compile Remove="Leetcode0344.cs" />
+    <Compile Remove="Leetcode0347.cs" />
     <Compile Remove="Leetcode0350.cs" />
     <Compile Remove="Leetcode0376.cs" />
     <Compile Remove="Leetcode0377.cs" />
@@ -131,6 +134,7 @@
     <Compile Remove="Leetcode0438.cs" />
     <Compile Remove="Leetcode0448.cs" />
     <Compile Remove="Leetcode0450.cs" />
+    <Compile Remove="Leetcode0451.cs" />
     <Compile Remove="Leetcode0461.cs" />
     <Compile Remove="Leetcode0463.cs" />
     <Compile Remove="Leetcode0509.cs" />
@@ -165,15 +169,20 @@
     <Compile Remove="Leetcode0784.cs" />
     <Compile Remove="Leetcode0786.cs" />
     <Compile Remove="Leetcode0797.cs" />
+    <Compile Remove="Leetcode0841.cs" />
     <Compile Remove="Leetcode0844.cs" />
     <Compile Remove="Leetcode0876.cs" />
     <Compile Remove="Leetcode0878.cs" />
     <Compile Remove="Leetcode0918.cs" />
     <Compile Remove="Leetcode0931.cs" />
+    <Compile Remove="Leetcode0938.cs" />
     <Compile Remove="Leetcode0952.cs" />
+    <Compile Remove="Leetcode0973.cs" />
     <Compile Remove="Leetcode0977.cs" />
     <Compile Remove="Leetcode0986.cs" />
     <Compile Remove="Leetcode0994.cs" />
+    <Compile Remove="Leetcode0997.cs" />
+    <Compile Remove="Leetcode1002.cs" />
     <Compile Remove="Leetcode1014.cs" />
     <Compile Remove="Leetcode1032.cs" />
     <Compile Remove="Leetcode1091.cs" />
@@ -184,6 +193,7 @@
     <Compile Remove="Leetcode1306.cs" />
     <Compile Remove="Leetcode1314.cs" />
     <Compile Remove="Leetcode1446.cs" />
+    <Compile Remove="Leetcode1557.cs" />
     <Compile Remove="Leetcode1567.cs" />
     <Compile Remove="Leetcode1791.cs" />
     <Compile Remove="Leetcode1823.cs" />
