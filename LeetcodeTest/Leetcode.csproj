@@ -39,6 +39,7 @@
     <Compile Remove="Leetcode0059.cs" />
     <Compile Remove="Leetcode0064.cs" />
     <Compile Remove="Leetcode0070.cs" />
+    <Compile Remove="Leetcode0072.cs" />
     <Compile Remove="Leetcode0074.cs" />
     <Compile Remove="Leetcode0075.cs" />
     <Compile Remove="Leetcode0077.cs" />
@@ -70,6 +71,7 @@
     <Compile Remove="Leetcode0142.cs" />
     <Compile Remove="Leetcode0143.cs" />
     <Compile Remove="Leetcode0147.cs" />
+    <Compile Remove="Leetcode0149.cs" />
     <Compile Remove="Leetcode0152.cs" />
     <Compile Remove="Leetcode0153.cs" />
     <Compile Remove="Leetcode0155.cs" />
@@ -88,6 +90,7 @@
     <Compile Remove="Leetcode0199.cs" />
     <Compile Remove="Leetcode0200_DFS.cs" />
     <Compile Remove="Leetcode0200_UnionFind.cs" />
+    <Compile Remove="Leetcode0201.cs" />
     <Compile Remove="Leetcode0202.cs" />
     <Compile Remove="Leetcode0203.cs" />
     <Compile Remove="Leetcode0205.cs" />
@@ -114,6 +117,7 @@
     <Compile Remove="Leetcode0297.cs" />
     <Compile Remove="Leetcode0300.cs" />
     <Compile Remove="Leetcode0304.cs" />
+    <Compile Remove="Leetcode0310.cs" />
     <Compile Remove="Leetcode0322.cs" />
     <Compile Remove="Leetcode0328.cs" />
     <Compile Remove="Leetcode0334.cs" />
@@ -125,6 +129,7 @@
     <Compile Remove="Leetcode0376.cs" />
     <Compile Remove="Leetcode0377.cs" />
     <Compile Remove="Leetcode0383.cs" />
+    <Compile Remove="Leetcode0384.cs" />
     <Compile Remove="Leetcode0387.cs" />
     <Compile Remove="Leetcode0409.cs" />
     <Compile Remove="Leetcode0413.cs" />
@@ -150,10 +155,12 @@
     <Compile Remove="Leetcode0567.cs" />
     <Compile Remove="Leetcode0572.cs" />
     <Compile Remove="Leetcode0572Dfs.cs" />
+    <Compile Remove="Leetcode0583.cs" />
     <Compile Remove="Leetcode0617.cs" />
     <Compile Remove="Leetcode0639.cs" />
     <Compile Remove="Leetcode0653.cs" />
     <Compile Remove="Leetcode0668.cs" />
+    <Compile Remove="Leetcode0673.cs" />
     <Compile Remove="Leetcode0695.cs" />
     <Compile Remove="Leetcode0700.cs" />
     <Compile Remove="Leetcode0701.cs" />
@@ -173,6 +180,7 @@
     <Compile Remove="Leetcode0844.cs" />
     <Compile Remove="Leetcode0876.cs" />
     <Compile Remove="Leetcode0878.cs" />
+    <Compile Remove="Leetcode0902.cs" />
     <Compile Remove="Leetcode0918.cs" />
     <Compile Remove="Leetcode0931.cs" />
     <Compile Remove="Leetcode0938.cs" />
@@ -187,6 +195,7 @@
     <Compile Remove="Leetcode1032.cs" />
     <Compile Remove="Leetcode1091.cs" />
     <Compile Remove="Leetcode1137.cs" />
+    <Compile Remove="Leetcode1143.cs" />
     <Compile Remove="Leetcode1217.cs" />
     <Compile Remove="Leetcode1249.cs" />
     <Compile Remove="Leetcode1290.cs" />
@@ -222,8 +231,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
     <PackageReference Include="coverlet.collector" Version="3.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

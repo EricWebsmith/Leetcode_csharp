@@ -1,5 +1,11 @@
 ﻿namespace Leetcode0300;
 
+/// <summary>
+/// This solution is O(n^2)
+/// But there is another solution of O(nlogn)
+/// neetcode said we will not be asked to achieve O(nlogn)
+/// I will trust him.
+/// </summary>
 public class Solution
 {
     public int LengthOfLIS(int[] nums)
@@ -22,8 +28,6 @@ public class Solution
             dp[i] = maxRest + 1;
             result = Math.Max(result, dp[i]);
         }
-
-        Helper.Print1D(dp);
 
         return result;
     }

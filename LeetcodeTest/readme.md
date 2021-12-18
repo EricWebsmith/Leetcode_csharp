@@ -1,8 +1,9 @@
-﻿# Notes
+﻿﻿﻿# Notes
 
-## Array Sort
+# Array 
 
 Array.Sort(seats);
+Array.Fill(counts, 1);
 
 ## Conversion
 
@@ -44,6 +45,45 @@ long distance2 = x * x + y * y;
 if (distance2 <= bombI[2] * bombI[2])
 {
     graph[i][j] = 1;
+}
+```
+
+## Beware of integer overflow, add i>0 in for loop
+
+```csharp
+public class Solution
+{
+    public int RangeBitwiseAnd(int left, int right)
+    {
+        int result = left;
+        for (int i = left + 1; i <= right && i > 0; i++)
+        {
+            result = result & i;
+            if (result == 0)
+            {
+                return 0;
+            }
+        }
+
+        return result;
+    }
+}
+
+```
+
+Without `i > 0`, if right is `int.MaxValue`, then the next value will be `int.MinValue`. Thus the result will be wrong.
+
+## Max/Min
+
+```csharp
+private int Min(params int[] values)
+{
+    int result = values[0];
+    for (int i = 1; i < values.Length; i++)
+    {
+        result = Math.Min(result, values[i]);
+    }
+    return result;
 }
 ```
 
