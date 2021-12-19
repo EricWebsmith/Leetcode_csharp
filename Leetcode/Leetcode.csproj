@@ -131,6 +131,7 @@
     <Compile Remove="Leetcode0383.cs" />
     <Compile Remove="Leetcode0384.cs" />
     <Compile Remove="Leetcode0387.cs" />
+    <Compile Remove="Leetcode0394.cs" />
     <Compile Remove="Leetcode0409.cs" />
     <Compile Remove="Leetcode0413.cs" />
     <Compile Remove="Leetcode0415.cs" />
@@ -227,6 +228,9 @@
     <Compile Remove="Leetcode5953.cs" />
     <Compile Remove="Leetcode5954.cs" />
     <Compile Remove="Leetcode5955.cs" />
+    <Compile Remove="Leetcode5956.cs" />
+    <Compile Remove="Leetcode5957.cs" />
+    <Compile Remove="Leetcode5958.cs" />
   </ItemGroup>
 
   <ItemGroup>

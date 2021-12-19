@@ -1,4 +1,4 @@
-﻿﻿﻿# Notes
+﻿﻿﻿﻿# Notes
 
 # Array 
 
@@ -7,10 +7,10 @@ Array.Fill(counts, 1);
 
 ## Conversion
 
-When converting math formula to from int to long, 
+When converting math formula to from `int` to `long`, 
 Convert the first value to long first, 
-So the following computation will be long instead of int. 
-Otherwise the computation will be int.
+So the following computation will be `long` instead of `int`. 
+Otherwise, the computation will be `int`.
 
 Right Way:
 ```csharp
@@ -86,6 +86,10 @@ private int Min(params int[] values)
     return result;
 }
 ```
+
+# Strings
+
+Using `StringBuilder` to concatenate strings.
 
 ## Implements
 

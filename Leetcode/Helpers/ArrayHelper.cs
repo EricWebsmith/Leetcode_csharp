@@ -1,4 +1,4 @@
-﻿namespace LeetcodeTest;
+﻿namespace Leetcode;
 
 public static class ArrayHelper
 {
@@ -55,6 +55,21 @@ public static class ArrayHelper
         return result;
     }
 
+    private static int[] LeetcodeToArray3Dots(this string s)
+    {
+        string[] arr = s.Split("...");
+        int start = int.Parse(arr[0]);
+        int end = int.Parse(arr[1]);
+        int step = start < end ? 1 : -1;
+        int n = Math.Abs(end - start) + 1;
+        int[] intArr = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            intArr[i] = start + step * i;
+        }
+        return intArr;
+    }
+
     public static int[] LeetcodeToArray(this string s)
     {
         if (s == "[]")
@@ -63,6 +78,13 @@ public static class ArrayHelper
         }
 
         string t = s.Replace("[", "").Replace("]", "");
+
+        //
+        if (t.Contains("..."))
+        {
+            return LeetcodeToArray3Dots(t);
+        }
+        //
         string[] list = t.Split(',', StringSplitOptions.RemoveEmptyEntries);
         int[] result = new int[list.Length];
         for (int i = 0; i < list.Length; i++)
@@ -74,7 +96,7 @@ public static class ArrayHelper
 
     public static string ToLeetcode(this IList<int> arr)
     {
-        if(arr == null)
+        if (arr == null)
         {
             return "[]";
         }

@@ -1,4 +1,4 @@
-﻿namespace LeetcodeTest;
+﻿namespace Leetcode;
 
 [DebuggerDisplay("{val}")]
 public class TreeNode
