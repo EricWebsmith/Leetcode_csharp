@@ -115,7 +115,6 @@
     <Compile Remove="Leetcode0283.cs" />
     <Compile Remove="Leetcode0290.cs" />
     <Compile Remove="Leetcode0297.cs" />
-    <Compile Remove="Leetcode0300.cs" />
     <Compile Remove="Leetcode0304.cs" />
     <Compile Remove="Leetcode0310.cs" />
     <Compile Remove="Leetcode0322.cs" />
