@@ -126,12 +126,17 @@
     <Compile Remove="Leetcode0304.cs" />
     <Compile Remove="Leetcode0310.cs" />
     <Compile Remove="Leetcode0322.cs" />
+    <Compile Remove="Leetcode0326.cs" />
     <Compile Remove="Leetcode0328.cs" />
     <Compile Remove="Leetcode0334.cs" />
     <Compile Remove="Leetcode0337.cs" />
+    <Compile Remove="Leetcode0338.cs" />
+    <Compile Remove="Leetcode0342.cs" />
     <Compile Remove="Leetcode0343.cs" />
     <Compile Remove="Leetcode0344.cs" />
+    <Compile Remove="Leetcode0345.cs" />
     <Compile Remove="Leetcode0347.cs" />
+    <Compile Remove="Leetcode0349.cs" />
     <Compile Remove="Leetcode0350.cs" />
     <Compile Remove="Leetcode0376.cs" />
     <Compile Remove="Leetcode0377.cs" />
