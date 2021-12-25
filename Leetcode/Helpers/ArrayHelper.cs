@@ -179,5 +179,22 @@ public static class ArrayHelper
         }
         return arr;
     }
+
+    public static string[][] LeetcodeToStringArray2D(this string s)
+    {
+        if (s == "[]")
+        {
+            return new string[][] { };
+        }
+
+        string[] list = s.Split("],[");
+        string[][] result = new string[list.Length][];
+        for (int i = 0; i < list.Length; i++)
+        {
+            string[] arr = LeetcodeToStringArray(list[i]);
+            result[i] = arr;
+        }
+        return result;
+    }
 }
 
