@@ -111,6 +111,23 @@ public static class ArrayHelper
         return s;
     }
 
+    public static string ToLeetcode(this IList<long> arr)
+    {
+        if (arr == null)
+        {
+            return "[]";
+        }
+
+        string s = string.Empty;
+        for (int i = 0; i < arr.Count; i++)
+        {
+            s += $"{arr[i]},";
+        }
+        s = s.Trim(' ', ',');
+        s = "[" + s + "]";
+        return s;
+    }
+
 
     public static string ToLeetcode(this IList<IList<int>> arr)
     {

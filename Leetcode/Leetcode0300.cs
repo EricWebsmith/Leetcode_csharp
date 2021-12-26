@@ -34,8 +34,8 @@ public class Solution_n2
 }
 
 /// <summary>
-/// Runtime: 96 ms, faster than 86.64% of C# online submissions for Longest Increasing Subsequence.
-/// Memory Usage: 38.9 MB, less than 61.37% of C# online submissions for Longest Increasing Subsequence.
+/// Runtime: 80 ms, faster than 98.79% of C# online submissions for Longest Increasing Subsequence.
+/// Memory Usage: 38.5 MB, less than 88.53% of C# online submissions for Longest Increasing Subsequence.
 /// </summary>
 public class Solution
 {
