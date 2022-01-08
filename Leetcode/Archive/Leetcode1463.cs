@@ -1,6 +1,9 @@
 ﻿namespace Leetcode1463;
 
-
+/// <summary>
+/// Runtime: 162 ms, faster than 69.23% of C# online submissions for Cherry Pickup II.
+/// Memory Usage: 38.5 MB, less than 100.00% of C# online submissions for Cherry Pickup II.
+/// </summary>
 public class Solution
 {
     int n;
