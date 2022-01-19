@@ -1,79 +1,48 @@
-﻿namespace Leetcode0450;
+﻿namespace Leetcode0452;
 
 
-public class TreeNode
+/// <summary>
+/// Runtime: 400 ms, faster than 98.18% of C# online submissions for Minimum Number of Arrows to Burst Balloons.
+/// Memory Usage: 51.3 MB, less than 85.45% of C# online submissions for Minimum Number of Arrows to Burst Balloons.
+/// </summary>
+public class Solution
 {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+    private int Compare(int[] pointA, int[] pointB)
     {
-        this.val = val;
-        this.left = left;
-        this.right = right;
+        return pointA[1].CompareTo(pointB[1]);
+    }
+
+    public int FindMinArrowShots(int[][] points)
+    {
+        Array.Sort(points, Compare);
+        int right = points[0][1];
+        int ans = 1;
+        for(int i = 0; i < points.Length; i++)
+        {
+            if(points[i][0] > right)
+            {
+                right = points[i][1];
+                ans++;
+            }
+        }
+        return ans;
     }
 }
 
 
-public class Solution
+[TestClass]
+public class SolutionTests
 {
-    public TreeNode DeleteNode(TreeNode root, int key)
+    private void TestBase(string pointsStr, int expected)
     {
-        TreeNode supper = new TreeNode(1000000);
-        supper.left = root;
-        //search key
-        TreeNode slow = supper;
-        TreeNode keyNode = root;
-        while (keyNode != null)
-        {
-            if (keyNode.val == key)
-            {
-                break;
-            }
-            else if(keyNode.val > key)
-            {
-                slow = keyNode;
-                keyNode = keyNode.left;
-            }
-            else
-            {
-                slow = keyNode;
-                keyNode = keyNode.right;
-            }
-        }
-
-        if(keyNode == null)
-        {
-            return root;
-        }
-
-        bool left = keyNode.val < slow.val;
-        if(keyNode.right == null)
-        {
-            if(left) slow.left = keyNode.left;
-            else slow.right = keyNode.left;
-            return supper.left;
-        }
-
-        if(keyNode.left == null)
-        {
-            if(left) slow.left = keyNode.right;
-            else slow.right = keyNode.right;
-            return supper.left;
-        }
-
-        if (left) slow.left = keyNode.right;
-        else slow.right = keyNode.right;
-
-        TreeNode current = keyNode.right;
-        while(current.left != null)
-        {
-            current = current.left;
-        }
-
-        current.left = keyNode.left;
-
-        return supper.left;
-
+        int[][] points = pointsStr.LeetcodeToArray2D();
+        int actual = new Solution().FindMinArrowShots(points);
+        Assert.AreEqual(expected, actual);
     }
+
+    [TestMethod] public void Test1() { TestBase("[[10,16],[2,8],[1,6],[7,12]]", 2); }
+    [TestMethod] public void Test2() { TestBase("[[1,2],[3,4],[5,6],[7,8]]", 4); }
+    [TestMethod] public void Test3() { TestBase("[[1,2],[2,3],[3,4],[4,5]]", 2); }
+    [TestMethod] public void Test4() { TestBase("[[1,2],[4,5],[1,5]]", 2); }
+
 }

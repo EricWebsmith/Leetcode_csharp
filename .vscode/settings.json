@@ -13,5 +13,12 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true
+    },
+    "dotnetCoreExplorer.searchpatterns":
+    {
+        "Unit Tests": ["Leetcode/bin/Debug/net6.0/Leetcode.dll"],
+        "Integration Tests": "src/**/IntegrationTests.dll",
+        "Acceptance Tests": "src/**/AcceptanceTests.{dll,exe}"
     }
+    
 }
