@@ -1,45 +1,37 @@
 ﻿namespace Leetcode0088;
 
+/// <summary>
+/// Runtime: 124 ms, faster than 74.75% of C# online submissions for Merge Sorted Array.
+/// Memory Usage: 41 MB, less than 30.53% of C# online submissions for Merge Sorted Array.
+/// </summary>
 public class Solution
 {
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
-        int[] temp = new int[m];
-        for (int i = 0; i < m; i++)
+        int mIndex = m - 1;
+        int nIndex = n - 1;
+        for(int i = m+n-1; i >=0; i--)
         {
-            temp[i] = nums1[i];
-        }
-
-        int index1 = 0;
-        int index2 = 0;
-        int index = 0;
-        while (index < m + n && index1 < m && index2<n)
-        {
-            if (temp[index1] <= nums2[index2])
+            if (nIndex < 0)
             {
-                nums1[index] = temp[index1];
-                index1++;
+                nums1[i] = nums1[mIndex];
+                mIndex--;
+            }
+            else if(mIndex < 0)
+            {
+                nums1[i] = nums2[nIndex];
+                nIndex--;
+            }
+            else if(nums1[mIndex] > nums2[nIndex])
+            {
+                nums1[i] = nums1[mIndex];
+                mIndex--;
             }
             else
             {
-                nums1[index] = nums2[index2];
-                index2++;
+                nums1[i] = nums2[nIndex];
+                nIndex--;
             }
-            index++;
-        }
-
-        while (index1 < m )
-        {
-            nums1[index] = temp[index1];
-            index1++;
-            index++;
-        }
-
-        while (index2 < n)
-        {
-            nums1[index] = nums2[index2];
-            index2++;
-            index++;
         }
     }
 }
