@@ -10,6 +10,11 @@ public class ListNode
         this.val = val;
         this.next = next;
     }
+
+    public override string ToString()
+    {
+        return this.ToLeetcode();
+    }
 }
 
 public static class ListNodeHelper
@@ -34,7 +39,7 @@ public static class ListNodeHelper
 
     public static ListNode Get(this ListNode head, int n)
     {
-        if(n == -1) { return null; }
+        if (n == -1) { return null; }
 
         ListNode current = head;
         for (int i = 1; i <= n; i++)
@@ -54,7 +59,7 @@ public static class ListNodeHelper
         ListNode pointer = head;
 
         ListNode circlePos = null;
-        if(pos == 0) { circlePos = head; }
+        if (pos == 0) { circlePos = head; }
 
         for (int i = 1; i < nums.Length; i++)
         {

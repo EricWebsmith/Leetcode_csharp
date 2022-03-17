@@ -40,6 +40,8 @@ public static class ArrayHelper
     {
         string t = s;
         t = t.Replace(" ", "");
+        t = t.Replace("\r", "");
+        t = t.Replace("\n", "");
         if (t == "[]")
         {
             return new int[][] { };
