@@ -9,7 +9,9 @@ public static class ArrayHelper
             return new char[][] { };
         }
 
-        string[] list = s.Split("],[");
+        s = s.Replace(",", "");
+
+        string[] list = s.Split("][");
         char[][] result = new char[list.Length][];
         for (int i = 0; i < list.Length; i++)
         {
@@ -26,14 +28,9 @@ public static class ArrayHelper
             return new char[] { };
         }
 
-        string t = s.Replace("[", "").Replace("]", "").Replace("'", "");
-        string[] list = t.Split(',', StringSplitOptions.RemoveEmptyEntries);
-        char[] result = new char[list.Length];
-        for (int i = 0; i < list.Length; i++)
-        {
-            result[i] = list[i][0];
-        }
-        return result;
+        string t = s.Replace("[", "").Replace("]", "").Replace("\"", "").Replace("'", "").Replace(",", "");
+
+        return t.ToArray();
     }
 
     public static int[][] LeetcodeToArray2D(this string s)
@@ -146,6 +143,34 @@ public static class ArrayHelper
         s = s.Trim(' ', ',');
         s = "[" + s + "]";
         return s;
+    }
+
+    /// <summary>
+    /// This replace false and true to 0 and 1.
+    /// </summary>
+    /// <param name="matrix"></param>
+    public static void Print2D(this IList<IList<bool>> matrix)
+    {
+        Console.WriteLine("-----Print 2D------");
+        for (int y = 0; y < matrix.Count; y++)
+        {
+            string p = string.Empty;
+            for (int x = 0; x < matrix[y].Count; x++)
+            {
+                if (matrix[y][x])
+                {
+                    p += "1,";
+                }
+                else
+                {
+                    p += "0,";
+                }
+                
+            }
+            p = p.Trim(' ', ',');
+            p = "[" + p + "]";
+            Console.WriteLine(p);
+        }
     }
 
     public static void Print2D<T>(this IList<IList<T>> matrix)
