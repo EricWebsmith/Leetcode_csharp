@@ -2,10 +2,20 @@
 
 
 public class Solution
-{
+{ 
+    private int Max(int[] nums, int count)
+    {
+        return nums.Take(count).Max();
+    }
+
     public int MaximumTop(int[] nums, int k)
     {
-        return 0;
+        int n = nums.Length;
+        if (k % 2 == 1 && n == 1) return -1;
+        if (k <= 1) return nums[k];
+        if (k > n) return nums.Max();
+        if (k == n) return Max(nums, k - 1);
+        return Math.Max(Max(nums, k - 1), nums[k]);
     }
 }
 
@@ -36,14 +46,19 @@ public class SolutionTests
     [TestMethod] public void Test13() { TestBase("[1,2,3,4,5]", 3, 4); }
     [TestMethod] public void Test14() { TestBase("[1,2,3,4,5]", 4, 5); }
     [TestMethod] public void Test15() { TestBase("[1,2,3,4,5]", 5, 4); }
-    [TestMethod] public void Test16() { TestBase("[1,2,3,4,5]", 6, 4); }
+    [TestMethod] public void Test16() { TestBase("[1,2,3,4,5]", 6, 5); }
     [TestMethod] public void Test17() { TestBase("[1,2,3,4,5]", 7, 5); }
     
     [TestMethod] public void Test22() { TestBase("[1,2,3,2,1]", 2, 3); }
     [TestMethod] public void Test23() { TestBase("[1,2,3,2,1]", 3, 2); }
-    [TestMethod] public void Test24() { TestBase("[1,2,3,2,1]",4, 2); }
+    [TestMethod] public void Test24() { TestBase("[1,2,3,2,1]",4, 3); }
     [TestMethod] public void Test25() { TestBase("[1,2,3,2,1]", 5, 3); }
     [TestMethod] public void Test26() { TestBase("[1,2,3,2,1]", 6, 3); }
     [TestMethod] public void Test100() { TestBase("[31,15,92,84,19,92,55]", 4, 92); }
 
 }
+
+/*
+Runtime: 263 ms, faster than 71.76% of C# online submissions for Maximize the Topmost Element After K Moves.
+Memory Usage: 49.1 MB, less than 24.71% of C# online submissions for Maximize the Topmost Element After K Moves.
+ */

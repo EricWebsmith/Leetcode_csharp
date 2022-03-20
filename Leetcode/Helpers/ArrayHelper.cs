@@ -150,6 +150,7 @@ public static class ArrayHelper
 
     public static void Print2D<T>(this IList<IList<T>> matrix)
     {
+        Console.WriteLine("-----Print 2D------");
         for (int y = 0; y < matrix.Count; y++)
         {
             string p = string.Empty;
