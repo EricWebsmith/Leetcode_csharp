@@ -1,4 +1,4 @@
-﻿﻿# Notes
+﻿﻿﻿# Notes
 
 # Array 
 
@@ -93,7 +93,7 @@ Using `StringBuilder` to concatenate strings.
 
 ## Implements
 
-228. Trie
-137. Binary Search Tree Iterator
-297. Serialize and Deserialize Binary Tree
+228 Trie
+137 Binary Search Tree Iterator
+297 Serialize and Deserialize Binary Tree
 Better finish this first.
