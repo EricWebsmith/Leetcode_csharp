@@ -54,8 +54,13 @@ public class SolutionTest
     [DataTestMethod]
     public void Test(int testId, string isConnectedStr, int expected)
     {
-        int[][] isConnected = Helper.Convert2D(isConnectedStr);
+        int[][] isConnected = ArrayHelper.LeetcodeToArray2D(isConnectedStr);
         int actual = (new Solution()).FindCircleNum(isConnected);
         Assert.AreEqual(expected, actual);
     }
 }
+
+/*
+Runtime: 114 ms, faster than 91.52% of C# online submissions for Number of Provinces.
+Memory Usage: 44.9 MB, less than 7.07% of C# online submissions for Number of Provinces. 
+ */

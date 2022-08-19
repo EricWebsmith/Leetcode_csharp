@@ -46,6 +46,9 @@ public class SolutionTest
     [TestMethod] public void Test2() { TestBase("foo","bar", false); }
     [TestMethod] public void Test3() { TestBase("paper", "title", true); }
     [TestMethod] public void Test4() { TestBase("badc", "baba", false); }
-
-
 }
+
+/*
+Runtime: 80 ms, faster than 95.58% of C# online submissions for Isomorphic Strings.
+Memory Usage: 39.5 MB, less than 23.93% of C# online submissions for Isomorphic Strings. 
+ */

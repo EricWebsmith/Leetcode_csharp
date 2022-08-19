@@ -93,6 +93,30 @@ public static class ArrayHelper
         return result;
     }
 
+    public static double[] LeetcodeToDoubleArray(this string s)
+    {
+        if (s == "[]")
+        {
+            return new double[] { };
+        }
+
+        string t = s.Replace("[", "").Replace("]", "");
+
+        //
+        //if (t.Contains("..."))
+        //{
+        //    return LeetcodeToArray3Dots(t);
+        //}
+        //
+        string[] list = t.Split(',', StringSplitOptions.RemoveEmptyEntries);
+        double[] result = new double[list.Length];
+        for (int i = 0; i < list.Length; i++)
+        {
+            result[i] = double.Parse(list[i]);
+        }
+        return result;
+    }
+
     public static string ToLeetcode(this IList<int> arr)
     {
         if (arr == null)

@@ -1,9 +1,5 @@
 ﻿namespace Leetcode0416;
 
-/// <summary>
-/// Runtime: 124 ms, faster than 64.44% of C# online submissions for Partition Equal Subset Sum.
-/// Memory Usage: 43.3 MB, less than 39.09% of C# online submissions for Partition Equal Subset Sum.
-/// </summary>
 public class Solution
 {
     public bool CanPartition(int[] nums)
@@ -30,7 +26,11 @@ public class Solution
                 {
                     return true;
                 }
-                temList.Add(newSum);
+
+                if (newSum < half)
+                {
+                    temList.Add(newSum);
+                }
             }
 
             foreach(int v in temList)
@@ -58,3 +58,8 @@ public class SolutionTests
     [TestMethod] public void Test3() { TestBase("[1,2,5]", false); }
     [TestMethod] public void Test4() { TestBase("[14,9,8,4,3,2]", true); }
 }
+
+/*
+ Runtime: 142 ms, faster than 83.54% of C# online submissions for Partition Equal Subset Sum.
+Memory Usage: 41.3 MB, less than 72.02% of C# online submissions for Partition Equal Subset Sum.
+ */
