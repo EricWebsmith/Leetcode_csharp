@@ -1,4 +1,4 @@
-﻿namespace Leetcode01898;
+﻿namespace Leetcode1898;
 
 public class Solution
 {

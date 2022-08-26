@@ -64,7 +64,6 @@ public class SolutionTests
     [TestMethod] public void Test2() { TestBase("[1, 2, 3, 3, 4, 4, 5, 5]", true); }
     [TestMethod] public void Test3() { TestBase("[1, 2, 3, 4, 4, 5]", false); }
     [TestMethod] public void Test4() { TestBase("[3, 4, 4, 5, 6, 7, 8, 9, 10, 11]", false); }
-
 }
 
 /*
